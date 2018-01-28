@@ -1,9 +1,8 @@
-from django.urls import path
+from django.urls import path,include
 from . import views
-from django.contrib.auth.views import login, logout
+
 
 urlpatterns = [
     path('', views.main),
-
-
+    path('inventory/', include('inventory.urls')),
 ]

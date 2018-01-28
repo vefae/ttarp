@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+    {% block head %}
+    <title>Stok ve Depo - Create</title>
+    {% endblock %}
+
+
+    {% block body %}
+
+<div class="jumbotron">
+
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+</div>
+<p>create inv</p>
+
+
+    {% endblock %}
