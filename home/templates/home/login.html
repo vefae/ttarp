@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Giriş Sayfası</title>
+{% endblock %}
+
+    {% block body %}
+    <div class="container">
+      <h1>Merhaba </h1>
+      <p>
+        TT ARP sistemine buradan girebilirsiniz.
+      </p>
+      <h2>Giriş</h2>
+      <form  method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" >Giriş</button>
+      </form>
+    </div>
+    {% endblock %}
