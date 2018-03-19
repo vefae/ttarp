@@ -6,8 +6,15 @@ from django.db import models
 
 
 class inventory (models.Model):
-    
+
     inv_name = models.CharField(max_length=140)
+    category = models.CharField(max_length=140)
+    subcategory = models.CharField(max_length=140)
+    producer = models.CharField(max_length=140)
+    barcode = models.IntegerField()
+    package_quantity = models.IntegerField()
+    unit = models.CharField(max_length=140)
+    reorder_quantity = models.IntegerField()
     notes = models.TextField()
 
     def __str__(self):
